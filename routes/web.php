@@ -20,7 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('/quiz', 'QuizController');
     Route::resource('/quiz/{quiz}/question', 'QuestionController');
-
+    Route::get('/change-question-order', 'QuestionController@ChangeOrder');
+    Route::get('/login/logout','LoginController@logout');
+    Route::resource('/invite','InviteController');
+    Route::get('/results','ResultController@index')->name('results');
+    Route::get('/result/{id}','ResultController@show')->name('result');
 });
 
 Route::group(['middleware' => 'guest'], function () {
@@ -36,9 +40,8 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/reset-password', 'LoginController@passreset')->name('password.update');
 });
 
-Route::get('/change-question-order', 'QuestionController@ChangeOrder')->middleware('auth');
 
-Route::get('/login/logout','LoginController@logout')->middleware('auth');
+
 
 Route::get('/check_quiz','QuizController@check_quiz_page')->name('check_quiz');
 Route::post('/checkcodeform','QuizController@check_quiz_withform');
@@ -50,8 +53,7 @@ Route::get('/quizs/{quizcode}/start/{token}','QuizController@start')->name('star
 
 Route::get('/quizs/{quizcode}/finish/{token}','QuizController@finish')->name('finish');
 
-Route::get('/results','ResultController@index')->name('results');
-Route::get('/result/{id}','ResultController@show')->name('result');
 
 
-Route::get('/','QuizController@index')->middleware('auth');
+
+Route::get('/','QuizController@index')->middleware('auth')->name('home');

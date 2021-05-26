@@ -30,7 +30,7 @@ class LoginController extends Controller
 
         if (auth()->attempt($userdata)) {
             // Authentication passed...
-            return redirect()->intended('home');
+            return redirect()->route('home');
         }else{
             return back()->withErrors('E-mail veya şifre yanlış!');
         }

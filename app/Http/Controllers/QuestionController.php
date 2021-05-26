@@ -58,8 +58,6 @@ class QuestionController extends Controller
     {
         $question->delete();
 
-
-
         return redirect()->route('question.index',$quiz->id)->with('success', 'Başarılı bir şekilde soru silindi.');
     }
 

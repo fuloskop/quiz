@@ -4,7 +4,7 @@
 @section('content')
     <div class="overflow-x-auto">
         <div class="flex items-center justify-center font-sans overflow-hidden">
-            <div class="w-full lg:w-5/6">
+            <div class="w-full lg:w-5/6 mb-3">
                 <div class="float-right">
                     <a href="{{route('quiz.create')}}">
                         <button class="bg-blue-700 hover text-white m-2 p-2 rounded-lg">Add Quiz</button>
