@@ -18,7 +18,7 @@
                             <th class="py-3 px-6 text-left">Kurum</th>
                             <th class="py-3 px-6 text-center">Sahibi</th>
                             <th class="py-3 px-6 text-center">Kullanımlar</th>
-                            <th class="py-3 px-6 text-center">Süreli mi?</th>
+                            <th class="py-3 px-6 text-center">Geçerlilik Süresi</th>
                             <th class="py-3 px-6 text-center">Uniqe Davet Kodu</th>
                             <th class="py-3 px-6 text-center">İşlemler</th>
                         </tr>
@@ -44,7 +44,7 @@
                                     @endisset
 
                                     @empty($invite->invite_finished_at)
-                                        Süresiz.
+                                            ∞
                                     @endempty
 
                                 </td>
