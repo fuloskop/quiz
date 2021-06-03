@@ -23,4 +23,6 @@ class Quiz extends Model
         return $this->hasMany(Question::class)->orderBy(\DB::raw('-`order`'), 'desc');
     }
 
+
+
 }

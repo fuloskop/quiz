@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Question;
 use App\Models\Quiz;
+use App\Models\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -56,9 +57,11 @@ class QuestionController extends Controller
 
     public function destroy(Quiz $quiz,Question $question)
     {
+        if (Result::where('quiz_uniqe_id', '=', $quiz->uniqe_id)->count() > 0) {
+            return redirect()->route('question.index',$quiz->id)->with('error', 'Soru silinemez. Bu sınava ait sonuç var.');
+        }
+
         $question->delete();
-
-
 
         return redirect()->route('question.index',$quiz->id)->with('success', 'Başarılı bir şekilde soru silindi.');
     }
