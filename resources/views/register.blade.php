@@ -31,6 +31,10 @@
 
     <form  method="post" action="{{url('/register/checkregister')}}">
         @csrf
+        <div>
+            <label class="pr-5 mb-2 text-indigo-500" for="invite">Davet Kodu veya Şiket adı *</label><span class="text-sm"></span>
+            <input class="w-full m-1 p-2 mb-6 bg-gray-800  focus:text-indigo-700 text-white border-b-2 border-indigo-500 outline-none focus:bg-gray-300"  id="invite" name="invite" >
+        </div>
         <div class="flex">
             <label class="w-1/2 block mb-2 text-indigo-500" for="name">Name</label>
             <label class="w-1/2 block mb-2 text-indigo-500" for="surname" >Surname</label>

@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
-    <title>Hello, world!</title>
+    <title>Quiz</title>
 </head>
 <body class="bg-gray-800">
 
@@ -43,8 +43,13 @@
             <a href="{{route('check_quiz')}}" class="mr-5 hover:text-blue-500 cursor-pointer border-b border-transparent hover:border-blue-600">Sınava Gir</a>
             <a  href="{{route('results')}}" class="mr-5 hover:text-blue-500 cursor-pointer border-b border-transparent hover:border-blue-600">Sonuçlar</a>
             <a
-                class="hover:text-blue-500 cursor-pointer border-b border-transparent hover:border-blue-600">Contact</a>
+                class="mr-5 hover:text-blue-500 cursor-pointer border-b border-transparent hover:border-blue-600">Contact</a>
+            <a href="{{route('invite.index')}}"
+                class="mr-5 hover:text-blue-500 cursor-pointer border-b border-transparent hover:border-blue-600">Davetler</a>
+
+
         </nav>
+
 
         <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
             @guest
