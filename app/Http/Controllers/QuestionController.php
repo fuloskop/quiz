@@ -31,8 +31,6 @@ class QuestionController extends Controller
             'answer'=> 'required',
         ]);
 
-
-
         Question::create([
             'quiz_id' => $quiz->id,
             'question_title' => $request->question_title,

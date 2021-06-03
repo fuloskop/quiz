@@ -3,8 +3,6 @@
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 H
 public/bootstrap.min.css,7\6\767d56e803c47dcbad9bd945cb061f765d7384d4
-V
-&app/Providers/RouteServiceProvider.php,d\4\d4febfd545b5694c9448dd8d6de9bf0531b0db61
 _
 /app/Http/Middleware/RedirectIfAuthenticated.php,4\0\40d54a318fd625143db9d72eb6edc2d5c100b557
 C
@@ -15,10 +13,6 @@ l
 <database/migrations/2014_10_12_000000_create_users_table.php,d\e\de963aaada5c6577b654cfbdcf083dc355b1fa2b
 v
 Fdatabase/migrations/2014_10_12_100000_create_password_resets_table.php,e\f\eff59cfca55470b5a81fdbeb82498e8bfe5c8174
->
-routes/web.php,6\b\6b9a783d9b43fee50fd28f56dbd1856d2608f305
-X
-(app/Http/Controllers/LoginController.php,6\2\62048319f92904bcca2f2f77a6ad27c318717b5d
 N
 resources/views/quiz.blade.php,a\7\a70ca8626fcb716735722aaf33216b456b37c3e3
 Q
@@ -55,8 +49,6 @@ r
 Bdatabase/migrations/2019_08_19_000000_create_failed_jobs_table.php,1\f\1f602a21e13ac2fa47afd78866311d456f21841f
 O
 database/seeders/QuizSeeder.php,4\c\4c24b34099e0301d713e7a0d505c94679bbac19a
-C
-app/Models/Quiz.php,8\2\8203d186434c1e824cd91bc9cddbc92e61dec82e
 R
 "database/factories/QuizFactory.php,2\7\277de54c094a663c03435940d34fa7cd2f0a3783
 h
@@ -104,8 +96,6 @@ Y
 )resources/views/question/create.blade.php,3\9\39175c6c90772225af5171ea0f6221e5450a8b38
 p
 @vendor/laravel/framework/src/Illuminate/Foundation/Auth/User.php,1\6\161bd81f63fbf21a2be53b3294418c5b01230d6f
-[
-+app/Http/Controllers/QuestionController.php,a\9\a9726c8bc02c44c4240ffbb9731182896bd52789
 S
 #database/seeders/QuestionSeeder.php,4\7\47987455dc418e3100a14d1f9c653ac7f43b26a1
 @
@@ -142,8 +132,6 @@ Q
 !resources/views/welcome.blade.php,0\c\0c96dd63e07fb2e889aeaea5cbabd89d0d09f1fb
 n
 >database/migrations/2021_04_29_114027_create_results_table.php,0\b\0b9585ce377a98715b50e4893bbe568e64000003
-E
-app/Models/Result.php,5\8\5880bf4975096300f7d6c52229c26b0b496fc45f
 W
 'resources/views/results/index.blade.php,7\c\7cb1aa715514c5942c1df1d5c4efce55cf3c3035
 V

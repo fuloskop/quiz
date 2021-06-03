@@ -54,4 +54,4 @@ Route::get('/results','ResultController@index')->name('results');
 Route::get('/result/{id}','ResultController@show')->name('result');
 
 
-Route::get('/','QuizController@index')->middleware('auth');
+Route::get('/','QuizController@index')->middleware('auth')->name('anasayfa');

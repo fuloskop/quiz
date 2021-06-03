@@ -1,8 +1,0 @@
-
-J	php:S1481I"/Remove this unused "$validated" local variable.(Äã˜8ë¹›/
-J	php:S1481"/Remove this unused "$validated" local variable.(Äã˜8Ğë¹•/
-p	php:S1192-"ODefine a constant instead of duplicating this literal "question.index" 4 times.(òé¢åıÿÿÿÿ8£ø¨™/
-J	php:S1481d"/Remove this unused "$questions" local variable.(ü¿èT8êîÅ›/
-n	php:S1192"RDefine a constant instead of duplicating this literal "required|max:255" 10 times.(‡«ŞÀ8Ğë¹•/
-c	php:S1763b"GDelete this unreachable code or refactor the code to make it reachable.(ØİšÛ8±³¥Ï/
-=	php:S1116-"Remove this empty statement.(òé¢åıÿÿÿÿ8‚´È—/
