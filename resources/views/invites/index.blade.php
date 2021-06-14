@@ -40,7 +40,11 @@
                                 </td>
                                 <td class="pl-2 text-center py-4">
                                     @isset($invite->invite_finished_at)
-                                        {{\Carbon\Carbon::parse($invite->invite_finished_at)->diffForHumans()}}
+                                        @if(\Carbon\Carbon::parse($invite->invite_finished_at)->isPast())
+                                            Zamanı Doldu. Geçersiz!
+                                        @else
+                                            {{\Carbon\Carbon::parse($invite->invite_finished_at)->diffForHumans()}}
+                                        @endif
                                     @endisset
 
                                     @empty($invite->invite_finished_at)

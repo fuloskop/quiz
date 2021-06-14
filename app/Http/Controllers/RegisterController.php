@@ -28,7 +28,7 @@ class RegisterController extends Controller
             'password' => 'required|confirmed|min:5'
         ]);
 
-        $invite = Invite::where('uniqe_id', $request->invite)
+        $invites = Invite::where('uniqe_id', $request->invite)
 
             ->orwhere('invite_finished_at', '>=', now())
             ->orWhereNull(['invite_finished_at'])

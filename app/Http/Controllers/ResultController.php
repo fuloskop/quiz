@@ -47,6 +47,6 @@ class ResultController extends Controller
 
        //dd($answers[0][323]);
 
-        return view('results.show',compact('finalescore','quiz','answers'));
+        return view('results.show',compact('finalescore','quiz','answers','correct','totalquestions','result'));
     }
 }

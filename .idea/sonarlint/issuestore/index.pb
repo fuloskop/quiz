@@ -1,22 +1,14 @@
 
-4
-.env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 H
 public/bootstrap.min.css,7\6\767d56e803c47dcbad9bd945cb061f765d7384d4
 _
 /app/Http/Middleware/RedirectIfAuthenticated.php,4\0\40d54a318fd625143db9d72eb6edc2d5c100b557
 C
 app/Models/User.php,a\9\a90f2e50cb06863b54effced365aa5f1fe7d9c88
-W
-'app/Http/Controllers/QuizController.php,7\9\79fe19812e8bcafca9a64c5737703c1799f0f98d
 l
 <database/migrations/2014_10_12_000000_create_users_table.php,d\e\de963aaada5c6577b654cfbdcf083dc355b1fa2b
 v
 Fdatabase/migrations/2014_10_12_100000_create_password_resets_table.php,e\f\eff59cfca55470b5a81fdbeb82498e8bfe5c8174
-N
-resources/views/quiz.blade.php,a\7\a70ca8626fcb716735722aaf33216b456b37c3e3
-Q
-!resources/views/layouts.blade.php,4\4\4457c8c0c5da8607d52b70b1d6c8805ad26712dd
 O
 resources/views/login.blade.php,9\7\9764e258672f24aae945b82aeb09dba30b278f68
 A
@@ -31,14 +23,10 @@ B
 public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
 S
 #app/Http/Controllers/Controller.php,2\e\2ed23e1749f02eb8e561f0a531d07863e7cf9fb9
-R
-"resources/views/register.blade.php,f\3\f380d771f4fff41fa7aee287cbda5685335b1cb5
 ]
 -resources/views/auth/reset-password.blade.php,1\0\109b1959bcca16cfc6f020c2c5683d4d79a4f797
 ^
 .resources/views/auth/forgot-password.blade.php,3\3\339bc22966453017fd7ea31351bf30182117db3b
-[
-+app/Http/Controllers/RegisterController.php,d\f\df88d3b4c73446ebf042b9b381a3f1e79fdab4c1
 R
 "database/factories/UserFactory.php,3\4\3401747fc769758d97931473eab6222bc2abf009
 S
@@ -69,8 +57,6 @@ D
 app/Models/Kurum.php,9\4\9453e02207f06c4207d5d983e95980a2abded510
 B
 tailwind.config.js,0\9\0918cbb76f2c44f223706cec9d31a32cd1177ce4
-U
-%resources/views/quiz/create.blade.php,6\6\662adb35c9c6f5f376b29a9ef70285b18aff9b27
 ;
 phpunit.xml,3\5\357499abc6fdfbad45ccc062a427f5f62fb2e3cd
 :
@@ -90,8 +76,6 @@ p
 @vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php,0\f\0fe1ebfe9dcd672aa93367e916a6e004176ddf7a
 G
 app/Models/Question.php,0\e\0eac3c4b55808da05425b0ffed3038075bedd2e2
-S
-#resources/views/quiz/show.blade.php,5\2\52a7d181015243a44157f2d9a0d05689ff5a90c9
 Y
 )resources/views/question/create.blade.php,3\9\39175c6c90772225af5171ea0f6221e5450a8b38
 p
@@ -134,7 +118,9 @@ n
 >database/migrations/2021_04_29_114027_create_results_table.php,0\b\0b9585ce377a98715b50e4893bbe568e64000003
 W
 'resources/views/results/index.blade.php,7\c\7cb1aa715514c5942c1df1d5c4efce55cf3c3035
+E
+app/Models/Result.php,5/8/5880bf4975096300f7d6c52229c26b0b496fc45f
 V
-&resources/views/results/show.blade.php,7\6\76eae5808ad4fe725d90967f80c55c9bfcc12480
-Y
-)app/Http/Controllers/ResultController.php,0\8\08ddcaec46e483c024eeb2f1bec6163b44eec467
+&app/Providers/RouteServiceProvider.php,d/4/d4febfd545b5694c9448dd8d6de9bf0531b0db61
+C
+app/Models/Quiz.php,8/2/8203d186434c1e824cd91bc9cddbc92e61dec82e

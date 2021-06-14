@@ -24,16 +24,40 @@
 
             </div>
 
+            <div class="box bg-blue-300 m-4 pb-2"  >
+                <label class=" text-lg font-medium text-gray-800">
+                Öğrenci bilgileri:
+                </label>
+                <div class="col-span-6 m-2 sm:col-span-4">
+                    <label class=" text-lg font-medium text-gray-800">Öğrenci ismi
+                        : {{ $result->fullname }}</label>
+                </div>
+                <div class="col-span-6 m-2 sm:col-span-4">
+                    <label class=" text-lg font-medium text-gray-800">Öğrenci telefon
+                        : {{ $result->phone }}</label>
+                </div>
+                <div class="col-span-6 m-2 sm:col-span-4">
+                    <label class=" text-lg font-medium text-gray-800">Öğrenci E-mail
+                        : {{ $result->email }}</label>
 
-
-
-
-
+                </div>
+            </div>
 
                 <div class="box bg-blue-300 m-4 pb-2"  >
+                    <label class=" text-lg font-medium text-gray-800">
+                        Öğrenci Sınav Sonucu:
+                    </label>
                     <div class="col-span-6 m-2 sm:col-span-4">
+                        <label class=" text-lg font-medium text-gray-800">Doğru cevap
+                            : {{ $correct }}/{{ $totalquestions }}</label>
+                    </div>
+                        <div class="col-span-6 m-2 sm:col-span-4">
+                        <label class=" text-lg font-medium text-gray-800">Yanlış cevap
+                            : {{ $totalquestions-$correct }}/{{ $totalquestions }}</label>
+                        </div>
+                            <div class="col-span-6 m-2 sm:col-span-4">
                         <label class=" text-lg font-medium text-gray-800">Aldığı puan
-                            : {{ $finalescore }}</label>
+                            : {{ number_format($finalescore, 1) }}</label>
 
 
                     </div>
@@ -42,12 +66,12 @@
                 </div>
 
             <div class="box bg-blue-300 m-4 pb-2"  >
-                <div class="col-span-6 m-2 sm:col-span-4">
+                <div class="col-span-6 m-2 sm:col-span-4 pt-2">
                     <label class=" text-lg font-medium text-gray-800">
                     @foreach($quiz->questions as $question)
                             <div class="bg-blue-600 m-2 p-2"  >
                                 {{$question->question_title}}
-                                <div class="col-span-6 m-4 sm:col-span-4 @if($question->answer==1) bg-blue-500 @endif">
+                                <div class="col-span-6 m-4 sm:col-span-4 @if($question->answer==1) bg-blue-500 @endif ">
                                     <label id="1" class="block text-lg font-medium text-gray-800 ">
                                         <input name="{{$question->id}}" type="radio" class="form-radio text-gray-600"
                                                @if(isset($answers[0][$question->id])&&$answers[0][$question->id]==1)
