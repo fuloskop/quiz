@@ -74,8 +74,6 @@ p
 @vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php,0\f\0fe1ebfe9dcd672aa93367e916a6e004176ddf7a
 G
 app/Models/Question.php,0\e\0eac3c4b55808da05425b0ffed3038075bedd2e2
-Y
-)resources/views/question/create.blade.php,3\9\39175c6c90772225af5171ea0f6221e5450a8b38
 p
 @vendor/laravel/framework/src/Illuminate/Foundation/Auth/User.php,1\6\161bd81f63fbf21a2be53b3294418c5b01230d6f
 S
