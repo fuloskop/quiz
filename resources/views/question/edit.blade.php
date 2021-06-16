@@ -45,7 +45,7 @@
                         @if(isset($question->image))
                         <img id="blah" class="object-fill object-center " src="{{asset('files/'.$question->image['img'])}}">
                         @else
-                            <img id="blah" src="#" alt="your image" />
+                            <img id="blah" src="#" alt="your image">
                         @endif
                         <input type="file" id="imgInp" name="file">
 

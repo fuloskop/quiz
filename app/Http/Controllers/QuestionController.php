@@ -113,9 +113,10 @@ class QuestionController extends Controller
             $destinationPath = public_path('/files');
             $image->move($destinationPath, $name);
 
-            $oldimg = public_path('files/'.$Question->image['img']);
-            $delimg=File::delete($oldimg);
-
+            if(isset($question->image)){
+                $oldimg = public_path('files/'.$Question->image['img']);
+                $delimg=File::delete($oldimg);
+            }
             $files['img']= $name;
             $Question->image = $files;
             $Question->save();
