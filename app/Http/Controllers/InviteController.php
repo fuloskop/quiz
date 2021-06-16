@@ -11,7 +11,7 @@ class InviteController extends Controller
     public function index()
     {
 
-        $Invites = Invite::orderByRaw("-invite_finished_at",'DESC')->where('kurum_id', '=', Auth::user()->kurum_id)->paginate(10);
+        $Invites = Invite::orderByRaw("-invite_finished_at",'DESC')->where('kurum_id', '=', Auth::user()->kurum_id)->with('kurum')->with('user')->paginate(10);
 
         return view('invites.index', compact('Invites'));
     }

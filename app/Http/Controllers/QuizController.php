@@ -17,20 +17,38 @@ use Session;
 
 class QuizController extends Controller
 {
-    public function index()
+
+    protected $model;
+
+    public function __construct(Quiz $model)
     {
-        $quizzes = Quiz::orderByDesc('updated_at')->where('kurum_id', '=', Auth::user()->kurum_id)->paginate(10);
+        $this->model = $model;
+    }
 
+    public function index(Request $request)
+    {
+        //$quizzes = Quiz::orderByDesc('updated_at')->where('kurum_id', '=', Auth::user()->kurum_id)->paginate(10);
+        $query = $this->model->orderByDesc('updated_at')->where('kurum_id', '=', Auth::user()->kurum_id)->with('kurum');
 
+        if($request->search)
+        {
+            $query = $query->Where('quiz_title','LIKE','%'.$request->search.'%',);
+        }
+        /*
+        if(isset($request->search)){
+            $quizzes = Quiz::orderByDesc('updated_at')->where('kurum_id', '=', Auth::user()->kurum_id)
+                ->Where('quiz_title','LIKE','%'.$request->search.'%',)->paginate(10);
+        }
+        */
+        $quizzes = $query->paginate(10);
         return view('quiz', compact('quizzes'));
     }
 
     public function create()
     {
-        $kurums = Kurum::all();
 
 
-        return view('quiz.create', compact('kurums'));
+        return view('quiz.create');
     }
 
     public function store(Request $request)

@@ -9,11 +9,20 @@
                     <a href="{{route('quiz.create')}}">
                         <button class="bg-blue-700 hover text-white m-2 p-2 rounded-lg">Add Quiz</button>
                     </a>
-
                 </div>
-
+                <div class="form-group mt-2">
+                    <div class="input-group">
+                        <form action="{{ route('quiz.index') }}" method="GET" role="search">
+                            @csrf
+                            <label for="search" class="text-sm font-medium text-gray-100">Search:</label>
+                            <input type="text" name="search" id="search"
+                                   class="mt-1 w-4/6 py-2 px-3 border border-gray-600 text-white bg-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded" type="submit">Ara</button>
+                        </form>
+                    </div>
+                </div>
                 <div class="bg-gray-800 shadow-md rounded my-6">
-                    <table class="w-full text-left rounded-lg">
+                    <table class="w-full text-left rounded-lg" >
                         <thead>
                         <tr class="bg-gray-700 text-gray-200 border border-b-0">
                             <th class="py-3 px-6 text-left">Kurum</th>
@@ -107,8 +116,5 @@
                 {{ $quizzes->links() }}
             </div>
         </div>
-
-
-    </div>
 
 @endsection

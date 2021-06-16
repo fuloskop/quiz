@@ -90,16 +90,10 @@ C
 public/js/deneme.js,2\5\25443d91295de59ba8e5660500b3d2bd3d349193
 K
 public/js/jquery.dad.min.js,8\7\876c34b37d44467b9d9dd0a55c3d210650ef0b27
-W
-'resources/views/question/edit.blade.php,4\6\465cacd69e9542f86fea6bde5d12dbfefebbc2d4
-=
-composer.json,3\9\3957b91a0d8450cea0115cfd5af69eac90d75897
 S
 #resources/views/checkquiz.blade.php,9\b\9b2166ca4d8348b3281397f8d2e9c422c8c690a1
 N
 resources/views/join.blade.php,4\2\4247887d29d778b5a61a07f7031ad575af4e744f
-S
-#resources/views/quizstart.blade.php,4\e\4e0dac50ab19b85277820d934f7e502037b967b3
 q
 Adatabase/migrations/2021_04_22_110751_add_uniqe_id_to_quizzes.php,0\5\05363ee207503af5907c3e6d54e5b78efdaf1695
 V
@@ -118,11 +112,5 @@ E
 app/Models/Result.php,5/8/5880bf4975096300f7d6c52229c26b0b496fc45f
 V
 &app/Providers/RouteServiceProvider.php,d/4/d4febfd545b5694c9448dd8d6de9bf0531b0db61
-C
-app/Models/Quiz.php,8/2/8203d186434c1e824cd91bc9cddbc92e61dec82e
-W
-'resources/views/invites/index.blade.php,5/4/545bfa5e8496ca1d10e92bf9c0c837de18edb8f3
 Q
 !resources/views/layouts.blade.php,4/4/4457c8c0c5da8607d52b70b1d6c8805ad26712dd
-Y
-)app/Http/Controllers/ResultController.php,0/8/08ddcaec46e483c024eeb2f1bec6163b44eec467

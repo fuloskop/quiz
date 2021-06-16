@@ -68,7 +68,7 @@
             <div class="box bg-blue-300 m-4 pb-2"  >
                 <div class="col-span-6 m-2 sm:col-span-4 pt-2">
                     <label class=" text-lg font-medium text-gray-800">
-                    @foreach($quiz->questions as $question)
+                    @foreach($questions as $question)
                             <div class="bg-blue-600 m-2 p-2"  >
                                 {{$question->question_title}}
                                 <div class="col-span-6 m-4 sm:col-span-4 @if($question->answer==1) bg-blue-500 @endif ">

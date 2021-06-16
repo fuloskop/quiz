@@ -27,7 +27,9 @@ class ResultController extends Controller
 
         $quiz = Quiz::where('uniqe_id',$result->quiz_uniqe_id)->first();
 
-        $totalquestions = count($quiz->Questions);
+        $questions = $quiz->Questions;
+
+        $totalquestions = $questions->count();
         $correct = 0;
 
         $answers = json_decode($result->answers, true);
@@ -47,6 +49,6 @@ class ResultController extends Controller
 
        //dd($answers[0][323]);
 
-        return view('results.show',compact('finalescore','quiz','answers','correct','totalquestions','result'));
+        return view('results.show',compact('finalescore','questions','quiz','answers','correct','totalquestions','result'));
     }
 }
