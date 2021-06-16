@@ -7,6 +7,7 @@ use App\Models\Quiz;
 use App\Models\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class QuestionController extends Controller
 {
@@ -29,11 +30,24 @@ class QuestionController extends Controller
             'chose3' => 'required|max:255',
             'chose4' => 'required|max:255',
             'answer'=> 'required',
+            'file' => 'image|mimes:jpeg,png,jpg|max:5120',
         ]);
+
+        $files=array();
+
+        if ($request->hasFile('file')) {
+            $image = $request->file('file');
+            $name = $quiz->id.'_'.time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/files');
+            $image->move($destinationPath, $name);
+
+            $files['img']= $name;
+        }
 
         Question::create([
             'quiz_id' => $quiz->id,
             'question_title' => $request->question_title,
+            'image'=> $files,
             'chose1' => $request->chose1,
             'chose2' => $request->chose2,
             'chose3' => $request->chose3,
@@ -46,6 +60,8 @@ class QuestionController extends Controller
 
     public function index(Quiz $quiz)
     {
+        //return $quiz->Questions;
+
         $quiz = Quiz::with('questions')->find($quiz->id);
 
         //return $quiz;
@@ -58,6 +74,12 @@ class QuestionController extends Controller
         if (Result::where('quiz_uniqe_id', '=', $quiz->uniqe_id)->count() > 0) {
             return redirect()->route('question.index',$quiz->id)->with('error', 'Soru silinemez. Bu sınava ait sonuç var.');
         }
+
+        if(isset($question->image)){
+            $oldimg = public_path('files/'.$question->image['img']);
+            $delimg=File::delete($oldimg);
+        }
+
 
         $question->delete();
 
@@ -78,10 +100,31 @@ class QuestionController extends Controller
             'chose3' => 'required|max:255',
             'chose4' => 'required|max:255',
             'answer'=> 'required',
+            'file' => 'image|mimes:jpeg,png,jpg|max:5120',
         ]);
 
+        $Question = Question::find($question->id);
 
-        Question::find($question->id)->update($request->post());
+        $files=array();
+
+        if ($request->hasFile('file')) {
+            $image = $request->file('file');
+            $name = $quiz->id.'_'.time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/files');
+            $image->move($destinationPath, $name);
+
+            $oldimg = public_path('files/'.$Question->image['img']);
+            $delimg=File::delete($oldimg);
+
+            $files['img']= $name;
+            $Question->image = $files;
+            $Question->save();
+        }
+
+
+
+        $Question->update($request->post());
+
         return redirect()->route('question.index',$quiz->id)->with('success', 'Başarılı bir şekilde soru değiştirildi.');
     }
 

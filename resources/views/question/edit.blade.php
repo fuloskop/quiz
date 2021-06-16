@@ -4,7 +4,7 @@
 @section('content')
 
     <div class="w-full px-96 mx-auto  ">
-        <form class="bg-gray-800" method="POST" action="{{route('question.update',[$quiz,$question]) }}">
+        <form class="bg-gray-800" method="POST" action="{{route('question.update',[$quiz,$question]) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div id="title " class="mt-5">
@@ -39,6 +39,18 @@
                     <textarea type="text" name="question_title" id="question_title"
                               class="mt-1 block  w-11/12  pt-2 pb-10 px-3 border border-gray-800 text-white bg-gray-800 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">{{$question->question_title}}</textarea>
                 </div>
+
+                @isset($question->image)
+                    <div class="h-auto w-auto md:w-1/2 border-r-2 border-b-2 border-blue-500">
+
+                        <img id="blah" class="object-fill object-center " src="{{asset('files/'.$question->image['img'])}}">
+
+                        <input type="file" id="imgInp" name="file">
+
+
+                    </div>
+                @endisset
+
 
                 <div class="col-span-6 m-2 sm:col-span-4">
                     <label for="chose1" class="block text-sm font-medium text-gray-800">Seçenek 1 :</label>
@@ -83,5 +95,14 @@
 
         </form>
     </div>
+
+    <script>
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                blah.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
 
 @endsection

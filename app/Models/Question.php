@@ -11,6 +11,8 @@ class Question extends Model
 
     protected $fillable=['quiz_id','order','question_title','image','chose1','chose2','chose3','chose4','answer'];
 
+    protected $casts = ['image'=>'array'];
+
     public function Quiz()
     {// 'App\Models\Quiz'
         return $this->belongsTo(Quiz::class);

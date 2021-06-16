@@ -70,60 +70,86 @@
                 <div class="demo">
                     @foreach($quiz->questions as $question)
                         <div class="box bg-blue-300 m-4 pb-2" data-question-id="{{$question->id}}" name="{{$question->id}}">
-                            <div class="col-span-6 m-2 sm:col-span-4">
-                                <label class=" text-lg font-medium text-gray-800">Soru
-                                    : {{ $question->question_title }}</label>
-                                <div class="w-4 mr-2 m-2 transform hover:text-blue-500 hover:scale-110 float-right"><!-- silme tuşu   -->
-                                    <form method="POST" action="{{ route('question.destroy',['quiz' => $quiz,'question' => $question])  }}" class="-mt-1">
-                                        <button type="submit">
-                                            <div class="w-4 transform hover:text-blue-500 hover:scale-110">
-                                                @csrf
-                                                @method('DELETE')
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                     viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                          stroke-width="2"
-                                                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                                                </svg>
-                                            </div>
-                                        </button>
-                                    </form>
+                            <div class="container  lg:w-full mx-auto flex flex-col">
+                                <div class="col-span-6 m-2 sm:col-span-4">
+
+                                    <div class="w-4 mr-2 m-2 transform hover:text-blue-500 hover:scale-110 float-right"><!-- silme tuşu   -->
+                                        <form method="POST" action="{{ route('question.destroy',['quiz' => $quiz,'question' => $question])  }}" class="-mt-1">
+                                            <button type="submit">
+                                                <div class="w-4 transform hover:text-blue-500 hover:scale-110">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                         viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              stroke-width="2"
+                                                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="w-4 mr-2 m-2 transform hover:text-blue-500 hover:scale-110 float-right">
+                                        <a href="{{ route('question.edit',['quiz' => $quiz,'question' => $question])  }}"><!-- edit tuşu   -->
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                 stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                      d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                            </svg>
+
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="w-4 mr-2 m-2 transform hover:text-blue-500 hover:scale-110 float-right">
-                                    <a href="{{ route('question.edit',['quiz' => $quiz,'question' => $question])  }}"><!-- edit tuşu   -->
+                                <!-- card -->
+                                <div v-for="card in cards" class="flex flex-col md:flex-row overflow-hidden
+                                        bg-blue-300 rounded-b-lg shadow-xl  w-100 mx-2">
+                                    <!-- media -->
+                                    @isset($question->image)
+                                    <div class="h-64 w-auto md:w-1/2 border-r-2 border-b-2 border-blue-500">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                             stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                  stroke-width="2"
-                                                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
-                                        </svg>
+                                            <img class="inset-0 h-full w-full object-fill object-center " src="{{asset('files/'.$question->image['img'])}}">
 
-                                    </a>
-                                </div>
+                                    </div>
+                                @endisset
+                                    <!-- content -->
+
+                                    <div class="w-full text-gray-800 flex flex-col justify-between">
+
+                                        <label class=" text-lg font-medium text-gray-800">Soru
+                                            : {{ $question->question_title }}</label>
+
+                                        <div class="col-span-6 m-4 sm:col-span-4 @if($question->answer==1) bg-blue-500 @endif">
+                                            <label id="1" class="block text-lg font-medium text-gray-800 ">Cevap 1 :
+
+                                                {{$question->chose1}}</label>
+                                        </div>
+                                        <div class="col-span-6 m-4 sm:col-span-4  @if($question->answer==2) bg-blue-500 @endif">
+                                            <label id="2" class="block text-lg font-medium text-gray-800">Cevap 2 :
+
+                                                {{$question->chose2}}</label>
+                                        </div>
+                                        <div class="col-span-6 m-4 sm:col-span-4  @if($question->answer==3) bg-blue-500 @endif">
+                                            <label id="3" class="block text-lg font-medium text-gray-800">Cevap 3 :
+
+                                                {{$question->chose3}}</label>
+                                        </div>
+                                        <div class="col-span-6 m-4  sm:col-span-4  @if($question->answer==4) bg-blue-500 @endif">
+                                            <label id="4" class="block text-lg font-medium text-gray-800">Cevap 4 :
+
+                                                {{$question->chose4}}</label>
+                                        </div>
+                                    </div>
+                                </div><!--/ card-->
                             </div>
 
 
-                            <div class="col-span-6 m-4 sm:col-span-4 @if($question->answer==1) bg-blue-500 @endif">
-                                <label id="1" class="block text-lg font-medium text-gray-800 ">Cevap 1 :
 
-                                    {{$question->chose1}}</label>
-                            </div>
-                            <div class="col-span-6 m-4 sm:col-span-4  @if($question->answer==2) bg-blue-500 @endif">
-                                <label id="2" class="block text-lg font-medium text-gray-800">Cevap 2 :
 
-                                    {{$question->chose2}}</label>
-                            </div>
-                            <div class="col-span-6 m-4 sm:col-span-4  @if($question->answer==3) bg-blue-500 @endif">
-                                <label id="3" class="block text-lg font-medium text-gray-800">Cevap 3 :
 
-                                    {{$question->chose3}}</label>
-                            </div>
-                            <div class="col-span-6 m-4  sm:col-span-4  @if($question->answer==4) bg-blue-500 @endif">
-                                <label id="4" class="block text-lg font-medium text-gray-800">Cevap 4 :
 
-                                    {{$question->chose4}}</label>
-                            </div>
+
                         </div>
                     @endforeach
                 </div>

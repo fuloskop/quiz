@@ -42,9 +42,12 @@
                                         bg-blue-300 rounded-b-lg shadow-xl  w-100 mx-2">
 
                     <!-- media -->
-                    <div class="h-64 w-auto md:w-1/2 border-r-2 border-b-2 border-blue-500">
-                        <img class="inset-0 h-full w-full object-fill object-center " src="https://images7.alphacoders.com/347/347549.jpg" />
-                    </div>
+                    @isset($question->image)
+                        <div class="h-64 w-auto md:w-1/2 border-r-2 border-b-2 border-blue-500">
+                            <img class="inset-0 h-full w-full object-fill object-center " src="{{asset('files/'.$question->image['img'])}}" />
+                        </div>
+                    @endisset
+
                     <!-- content -->
                     <div class="w-full  py-4 px-6 text-gray-800 flex flex-col justify-between">
                         <p class="mt-2"><input name="{{$question->id}}" value="1" type="radio" class="form-radio text-gray-600"> {{ $question->chose1 }}</p>
