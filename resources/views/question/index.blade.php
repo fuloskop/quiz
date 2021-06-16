@@ -50,6 +50,10 @@
                 </div>
             </div>
 
+            <div class="float-right">
+                <a class="bg-blue-700 hover text-white m-2 p-2 rounded-lg"
+                   href="{{route('quiz.edit', $quiz)}}">Sınavı Düzenle</a>
+            </div>
             <div class="col-span-6 mx-2 mb-4 mt-4 sm:col-span-4">
                 <div class="flex items-start">
                     <div class="text-lg">

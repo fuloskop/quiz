@@ -97,6 +97,8 @@
                            value="{{ date('Y-m-d\TH:i', strtotime($quiz->quiz_finished_at)) }}" hidden disabled>
                 </div>
                 <div class="float-right">
+                    <a class="bg-blue-700 hover text-white m-2 p-2 rounded-lg"
+                       href="{{route('question.index', $quiz)}}">Soruları Düzenle</a>
                     <button class="bg-blue-700 hover text-white m-2 p-2 rounded-lg" type="submit">Sınav Güncelle</button>
                 </div>
 

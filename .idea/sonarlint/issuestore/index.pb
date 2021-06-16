@@ -66,8 +66,6 @@ server.php,d\3\d37d4b14024cef95b9034014685591a5ae93abf5
 .gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
 >
 config/app.php,7\3\734f7be25e8008acc7129e73cd116d5de913e6fd
-S
-#resources/views/quiz/edit.blade.php,a\c\ac0dc5a08c7579ec3def687729d64001d2fc9d01
 p
 @database/migrations/2021_04_12_171024_create_questions_table.php,9\c\9cbf54e1ccd0d752e73b5bb18f5cc207ac41b929
 y
@@ -86,8 +84,6 @@ S
 public/js/app.js,3\3\33ff5b9601779f3f4bcbd328a76c18073a9a65bb
 B
 public/js/appjs.js,a\b\ab84317112e27157b348e5bd9d31c3bc840446a7
-X
-(resources/views/question/index.blade.php,3\c\3cb864ee6f1fa53ae271e4661f3134583c247a49
 @
 public/js/dnd.js,9\a\9ad25b2704fcb0186417fdaf91f88bd637eb6acb
 C
