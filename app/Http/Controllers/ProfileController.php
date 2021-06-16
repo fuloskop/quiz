@@ -32,4 +32,21 @@ class ProfileController extends Controller
 
         return back()->with('error', 'Şifrenizi yanlış girdiniz. Lütfen tekrar deneyin');
     }
+
+    public function mailchange(Request $request)
+    {
+        $this->validate($request,[
+            'new_email'=> 'required|email|unique:users,email',
+            'password' => 'required|min:5'
+        ]);
+
+        if(Hash::check($request->password , auth()->user()->password)){
+            $user = User::find(Auth::user()->id);
+            $user->email = $request->new_email;
+            $user->save();
+            return back()->with('success', 'Başarılı bir şekilde email adresi güncellendi.');
+        }
+        return back()->with('error', 'Şifrenizi yanlış girdiniz. Lütfen tekrar deneyin');
+    }
+
 }

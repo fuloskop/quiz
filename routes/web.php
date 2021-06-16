@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/result/{id}','ResultController@show')->name('result');
     Route::get('/profile','ProfileController@index')->name('profile');
     Route::post('/profile/passchange','ProfileController@passchange')->name('profile.passchange');
+    Route::post('/profile/mailchange','ProfileController@mailchange')->name('profile.mailchange');
 });
 
 Route::group(['middleware' => 'guest'], function () {

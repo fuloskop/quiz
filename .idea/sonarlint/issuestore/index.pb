@@ -124,3 +124,9 @@ V
 &app/Providers/RouteServiceProvider.php,d/4/d4febfd545b5694c9448dd8d6de9bf0531b0db61
 C
 app/Models/Quiz.php,8/2/8203d186434c1e824cd91bc9cddbc92e61dec82e
+W
+'resources/views/invites/index.blade.php,5/4/545bfa5e8496ca1d10e92bf9c0c837de18edb8f3
+Q
+!resources/views/layouts.blade.php,4/4/4457c8c0c5da8607d52b70b1d6c8805ad26712dd
+Y
+)app/Http/Controllers/ResultController.php,0/8/08ddcaec46e483c024eeb2f1bec6163b44eec467
