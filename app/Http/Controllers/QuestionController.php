@@ -80,7 +80,6 @@ class QuestionController extends Controller
             $delimg=File::delete($oldimg);
         }
 
-
         $question->delete();
 
         return redirect()->route('question.index',$quiz->id)->with('success', 'Başarılı bir şekilde soru silindi.');

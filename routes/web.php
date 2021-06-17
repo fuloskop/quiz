@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
-
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('/quiz', 'QuizController');
     Route::resource('/quiz/{quiz}/question', 'QuestionController');
@@ -49,7 +45,7 @@ Route::group(['middleware' => 'guest'], function () {
 Route::get('/check_quiz','QuizController@check_quiz_page')->name('check_quiz');
 Route::post('/checkcodeform','QuizController@check_quiz_withform');
 Route::get('/checkcodeurl/{quizcode}','QuizController@check_quiz_withlink');
-Route::get('/quizs/{quizcode}/join','QuizController@join')->name('join');
+Route::get('/quizs/{quizcode}/join','QuizController@join')->name('join')->whereAlphaNumeric('quizcode');
 Route::post('/getjoinner','QuizController@getjoinner');
 
 Route::get('/quizs/{quizcode}/start/{token}','QuizController@start')->name('start');

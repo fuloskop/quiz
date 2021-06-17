@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\File;
 use ReallySimpleJWT\Token;
 
 use Illuminate\Support\Facades\Validator;
@@ -110,7 +111,19 @@ class QuizController extends Controller
 
     public function destroy($id)
     {
-        Quiz::find($id)->delete();
+        $quiz = Quiz::find($id);
+
+
+        foreach ($quiz->questions as $question){
+            if(isset($question->image)){
+                $oldimg = public_path('files/'.$question->image['img']);
+                $delimg=File::delete($oldimg);
+            }
+        }
+
+
+        $quiz->delete();
+
         return redirect('quiz')->with('success', 'Başarılı bir şekilde silindi.');
     }
 
