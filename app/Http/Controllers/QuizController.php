@@ -238,6 +238,7 @@ class QuizController extends Controller
             'surname' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
+            'ip' => 'required|ip'
         ]);
 
         if ($validator->fails()) {
@@ -252,7 +253,8 @@ class QuizController extends Controller
                 'quiz_uniqe_id' => $quizcode,
                 'fullname' => $participant['name'].' '.$participant['surname'],
                 'email' => $participant['email'],
-                'phone' => $participant['phone']
+                'phone' => $participant['phone'],
+                'ip' => $participant['ip']
             ]
         );
 

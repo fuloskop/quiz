@@ -102,12 +102,6 @@ C
 config/database.php,6\9\69e3bd8ddf957a32ec5a3b80a87f8cc4bfe36a27
 Q
 !resources/views/welcome.blade.php,0\c\0c96dd63e07fb2e889aeaea5cbabd89d0d09f1fb
-n
->database/migrations/2021_04_29_114027_create_results_table.php,0\b\0b9585ce377a98715b50e4893bbe568e64000003
-W
-'resources/views/results/index.blade.php,7\c\7cb1aa715514c5942c1df1d5c4efce55cf3c3035
-E
-app/Models/Result.php,5/8/5880bf4975096300f7d6c52229c26b0b496fc45f
 V
 &app/Providers/RouteServiceProvider.php,d/4/d4febfd545b5694c9448dd8d6de9bf0531b0db61
 Q
@@ -128,8 +122,6 @@ r
 Bvendor/laravel/framework/src/Illuminate/Database/Query/Builder.php,3/2/32e4b05a8a099e0ad90fbcbe2edda8aafd9d8c1d
 u
 Evendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php,9/e/9e54b606ee9bc26139813c48fa8918fb24dcdc85
-s
-Cvendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php,c/6/c6ffb239d020157dd8a84e70d76b8215b95ca60b
 S
 #resources/views/quizstart.blade.php,4/e/4e0dac50ab19b85277820d934f7e502037b967b3
 W
@@ -144,8 +136,6 @@ K
 storage/debugbar/.gitignore,e/a/eaaa6da4e260f4f291646e34f0bff7f5dff01bee
 =
 composer.json,3/9/3957b91a0d8450cea0115cfd5af69eac90d75897
-=
-composer.lock,c/3/c3262e2a0879195bd6a727e90f768bc85ad79ffd
 Y
 )app/Http/Controllers/InviteController.php,3/7/37662ed40edcb1ce5020f325853d8317bb9f279b
 N
@@ -160,3 +150,7 @@ W
 'resources/views/question/edit.blade.php,4/6/465cacd69e9542f86fea6bde5d12dbfefebbc2d4
 Y
 )resources/views/question/create.blade.php,3/9/39175c6c90772225af5171ea0f6221e5450a8b38
+=
+composer.lock,c/3/c3262e2a0879195bd6a727e90f768bc85ad79ffd
+s
+Cvendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php,c/6/c6ffb239d020157dd8a84e70d76b8215b95ca60b

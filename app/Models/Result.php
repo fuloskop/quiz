@@ -9,7 +9,7 @@ class Result extends Model
 {
     use HasFactory;
 
-    protected $fillable=['kurum_id','quiz_uniqe_id','fullname','email','phone','answers'];
+    protected $fillable=['kurum_id','quiz_uniqe_id','fullname','email','phone','ip','answers'];
 
     public function Quiz()
     {// 'App\Models\User'

@@ -14,6 +14,7 @@
                             <th class="py-3 px-6 text-left">FullName</th>
                             <th class="py-3 px-6 text-left">E-mail</th>
                             <th class="py-3 px-6 text-left">Phone</th>
+                            <th class="py-3 px-6 text-left">ip adress</th>
                             <th class="py-3 px-6 text-left">Result</th>
                         </tr>
                         </thead>
@@ -34,6 +35,9 @@
                                 </td>
                                 <td class="pl-4 py-4">
                                     {{$result->phone}}
+                                </td>
+                                <td class="pl-4 py-4">
+                                    {{$result->ip}}
                                 </td>
 
                                 <td class="pl-10 py-4">

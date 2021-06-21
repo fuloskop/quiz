@@ -22,6 +22,7 @@ class CreateResultsTable extends Migration
             $table->string('fullname');
             $table->string('email');
             $table->bigInteger('phone');
+            $table->ipAddress('ip');
             $table->longText('answers');
             $table->timestamps();
         });
