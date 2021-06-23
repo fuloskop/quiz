@@ -154,3 +154,5 @@ Y
 composer.lock,c/3/c3262e2a0879195bd6a727e90f768bc85ad79ffd
 s
 Cvendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php,c/6/c6ffb239d020157dd8a84e70d76b8215b95ca60b
+C
+app/Http/Kernel.php,4/0/405f423e61f666bcedb754ae8befdce9e746176e
