@@ -49,10 +49,7 @@ Route::get('/quizs/{quizcode}/join','QuizController@join')->name('join')->whereA
 Route::post('/getjoinner','QuizController@getjoinner');
 
 Route::get('/quizs/{quizcode}/start/{token}','QuizController@start')->name('start');
-
 Route::get('/quizs/{quizcode}/finish/{token}','QuizController@finish')->name('finish');
-
-
 
 
 Route::get('/','QuizController@index')->middleware('auth')->name('home');

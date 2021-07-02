@@ -9,8 +9,6 @@ l
 <database/migrations/2014_10_12_000000_create_users_table.php,d\e\de963aaada5c6577b654cfbdcf083dc355b1fa2b
 v
 Fdatabase/migrations/2014_10_12_100000_create_password_resets_table.php,e\f\eff59cfca55470b5a81fdbeb82498e8bfe5c8174
-O
-resources/views/login.blade.php,9\7\9764e258672f24aae945b82aeb09dba30b278f68
 A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
 <
@@ -29,18 +27,10 @@ S
 .resources/views/auth/forgot-password.blade.php,3\3\339bc22966453017fd7ea31351bf30182117db3b
 R
 "database/factories/UserFactory.php,3\4\3401747fc769758d97931473eab6222bc2abf009
-S
-#database/seeders/DatabaseSeeder.php,a\c\aca1efccd4101e0c9bdd34803577859ace08ef45
-O
-database/seeders/UserSeeder.php,9\a\9a5fbe4af4b23f69ef07f35a2d8a4d7c75c60797
 r
 Bdatabase/migrations/2019_08_19_000000_create_failed_jobs_table.php,1\f\1f602a21e13ac2fa47afd78866311d456f21841f
 O
 database/seeders/QuizSeeder.php,4\c\4c24b34099e0301d713e7a0d505c94679bbac19a
-R
-"database/factories/QuizFactory.php,2\7\277de54c094a663c03435940d34fa7cd2f0a3783
-h
-8database/migrations/2021_04_06_124650_create_quizzes.php,3\e\3eddd5df6ff2fb006812068234cbef143e34c40e
 C
 resources/js/app.js,8\5\857628e89e6d3e0f341720284d70b5f44c757924
 P
@@ -130,8 +120,6 @@ S
 #resources/views/quiz/show.blade.php,5/2/52a7d181015243a44157f2d9a0d05689ff5a90c9
 Q
 !resources/views/profile.blade.php,c/e/ce39817f060740fda2bb0924fbea6bb5cf6252e7
-X
-(app/Http/Controllers/LoginController.php,6/2/62048319f92904bcca2f2f77a6ad27c318717b5d
 K
 storage/debugbar/.gitignore,e/a/eaaa6da4e260f4f291646e34f0bff7f5dff01bee
 =
@@ -156,3 +144,13 @@ s
 Cvendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php,c/6/c6ffb239d020157dd8a84e70d76b8215b95ca60b
 C
 app/Http/Kernel.php,4/0/405f423e61f666bcedb754ae8befdce9e746176e
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+[
++app/Http/Controllers/QuestionController.php,a/9/a9726c8bc02c44c4240ffbb9731182896bd52789
+W
+'resources/views/results/index.blade.php,7/c/7cb1aa715514c5942c1df1d5c4efce55cf3c3035
+E
+app/Models/Result.php,5/8/5880bf4975096300f7d6c52229c26b0b496fc45f
+n
+>database/migrations/2021_04_29_114027_create_results_table.php,0/b/0b9585ce377a98715b50e4893bbe568e64000003
